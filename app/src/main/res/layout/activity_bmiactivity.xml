@@ -14,7 +14,6 @@
         android:layout_marginTop="100dp"
         android:text="Select your Height"
         android:textSize="18sp"
-        android:textColor="@color/black"
         />
 
     <LinearLayout
@@ -27,13 +26,13 @@
         <Spinner
             android:id="@+id/spinnerFt"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1" />
 
         <Spinner
             android:id="@+id/spinnerIn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:layout_weight="1" />
     </LinearLayout>
@@ -45,16 +44,15 @@
         android:layout_marginTop="26dp"
         android:text="Select your Weight"
         android:textSize="18sp"
-        android:textColor="@color/black"
         />
     <Spinner
         android:layout_marginTop="16dp"
         android:id="@+id/spinnerWeight"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="40dp"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCheckBmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -67,7 +65,6 @@
         android:layout_marginTop="26dp"
         android:id="@+id/tvBmi"
         android:textStyle="bold"
-        android:textColor="@color/black"
         android:textSize="16sp"
         android:gravity="center"
         android:layout_width="match_parent"

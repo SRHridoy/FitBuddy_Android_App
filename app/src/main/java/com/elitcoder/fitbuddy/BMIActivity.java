@@ -21,6 +21,33 @@ public class BMIActivity extends AppCompatActivity {
         setContentView(view);
 
         spinnerSetUp();
+        convertionOfUnits();
+
+    }
+
+    private void convertionOfUnits() {
+        String ftS = bmiactivityBinding.spinnerFt.getSelectedItem().toString().split("\\s+")[0];
+        Float ftF = Float.parseFloat(ftS);
+
+        String inchS = bmiactivityBinding.spinnerIn.getSelectedItem().toString().split("\\s+")[0];
+        Float inchF = Float.parseFloat(inchS);
+
+        String weightS = bmiactivityBinding.spinnerWeight.getSelectedItem().toString().split("\\s+")[0];
+        Float weightF = Float.parseFloat(weightS);
+
+        Float meterF = 0.3048f*ftF + 0.0254f*inchF;
+        calculateBmi(weightF,meterF);
+    }
+
+    private void calculateBmi(Float weightF, Float meterF) {
+        float bmi = weightF/(meterF*meterF);
+        String bmiS = Float.toString(bmi);
+//        bmiactivityBinding.btnCheckBmi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                bmiactivityBinding.tvBmi.setText(bmiS);
+//            }
+//        });
     }
 
     private void spinnerSetUp() {
